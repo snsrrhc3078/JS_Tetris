@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>추성현의 테트리스</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- 
+        테트리스크기는 가로x세로 = 10x20이다
+        1칸당 30px x 30px로 설정
+        테트리스 이름
+        점수
+        없앤 라인
+        다음에 나올 블럭
+        스타트
+     -->
+     <div id="wrapper">
+        <div id="wrapper2">
+            <div id="content"></div>
+            <div id="display">
+                <h1>테트리스</h1>
+                <span id="level">Level: 1</span><br>
+                <span id="highest-score">Highest Score: 0</span><br>
+                <span id="score">Score: 0</span><br>
+                <span id="lines">Lines: 0</span><br>
+                <span id="nextBlock">NextBlock</span><br>
+                <div id="preview"></div>
+                <div id="start">
+                    <button id="start-btn">Start</button>
+                    <button id="modal-btn">
+                        <img src="./images/question.png" alt="">
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="my-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p><h2>설명서</h2></p>
+                
+                <h3>클리어 조건</h3>
+                <div>라인을 10개 이상 만들경우 해당 레벨 클리어</div><br>
+                <div>레벨은 총 5단계 있음</div><br>
+                
+                <h3>조작법</h3>
+                <div>←, → :도형의 좌우 이동</div><br>
+                <div>↑:도형의 회전</div><br>
+                <div>↓:도형 한칸 내리기</div><br>
+                <div>SpaceBar : 도형 끝까지 내리기</div><br>
+
+                <h3>점수제도</h3>
+                <div>직접 도형을 1칸 내릴 때 마다: 1 * level 점</div><br>
+                <div>블록을 하나 완성할 떄 마다: 100 * level 점</div><br>
+            </div>
+        </div>
+        
+     </div>
+</body>
+<!-- <script type="module" src="src/main.js"></script> -->
+<script src="src/main.js"></script>
+<script src="src/board.js"></script>
+<script src="src/process.js"></script>
+<script src="src/shapes.js"></script>
+<script src="src/util.js"></script>
+<script src="src/display.js"></script>
+
+</html>
